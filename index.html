@@ -123,9 +123,7 @@
       letter-spacing: 1px;
       text-align: center;
     }
-    /* ВЫРАВНИВАНИЕ ТЕКСТА ПО ШИРИНЕ */
     .justify { text-align: justify !important; }
-    /* Основные текстовые блоки */
     .invite-text, .story-text, .dress-text, .place-note {
       font-size: 1.07rem;
       margin: 1.2em 0 0.4em 0;
@@ -134,7 +132,6 @@
       word-break: break-word;
     }
     .centered { text-align: center; }
-    /* История */
     .story-img {
       width: 100%;
       max-width: 340px;
@@ -143,7 +140,6 @@
       display: block;
       box-shadow: 0 2px 16px rgba(129,140,90,0.09);
     }
-    /* Календарь */
     .calendar-table {
       margin: 1.2em auto 0 auto;
       border-collapse: collapse;
@@ -180,7 +176,6 @@
       margin-top: 1.2em;
       text-align: center;
     }
-    /* Место проведения */
     .place-section {
       margin: 2.1em auto 1.6em auto;
       text-align: center;
@@ -204,7 +199,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-    /* Программа дня */
     .program-section {
       margin: 2.2em auto 1.2em auto;
       text-align: center;
@@ -235,7 +229,6 @@
       vertical-align: top;
       font-weight: 600;
     }
-    /* Dress-code цвета */
     .dress-section {
       margin: 2.3em auto 1.6em auto;
       text-align: center;
@@ -257,7 +250,6 @@
     .palette-sand { background: var(--sand);}
     .palette-white { background: #fff; border: 1px solid #ece7e0;}
     .palette-brown { background: var(--brown);}
-    /* Отсчет до свадьбы */
     .counter-section {
       text-align: center;
       margin: 2em auto 2.2em auto;
@@ -269,7 +261,6 @@
       margin-top: 0.6em;
       font-family: 'Playfair Display', serif;
     }
-    /* Форма RSVP */
     .form-section {
       margin: 2.5em auto 1.6em auto;
       background: #23211D;
@@ -345,7 +336,6 @@
   </style>
 </head>
 <body>
-
   <!-- Обложка -->
   <div class="cover">
     <div class="cover-title-block">
@@ -356,7 +346,6 @@
       <span class="cover-names-script cover-names-script-bottom">Аня</span>
     </div>
   </div>
-
   <div class="section fade-in fade-in-1" id="invite">
     <div class="invite-title">Дорогие гости, мы приглашаем вас<br>
       <span class="invite-script">на нашу свадьбу</span>
@@ -366,7 +355,6 @@
       Мы приглашаем вас разделить с нами радость этого особенного события и стать частью нашей семейной истории. Ваше присутствие сделает наш день ещё более значимым и незабываемым.
     </div>
   </div>
-
   <div class="section fade-in fade-in-2" id="story">
     <div class="story-title">История<br><span class="story-script">любви</span></div>
     <img src="couple.jpg" alt="Мы" class="story-img">
@@ -375,7 +363,6 @@
       Теперь мы готовы сделать следующий шаг и разделить этот особенный момент с вами!
     </div>
   </div>
-
   <div class="section fade-in fade-in-3 calendar-section" id="calendar">
     <div class="calendar-title">Дата проведения<br>
       <span class="calendar-script">свадьбы</span>
@@ -408,7 +395,6 @@
     </table>
     <div class="calendar-date-text">18 октября 2025 года</div>
   </div>
-
   <div class="section fade-in fade-in-4 place-section" id="place">
     <div class="place-title">МЕСТО<br><span class="place-script">ПРОВЕДЕНИЯ</span></div>
     <div class="place-time">12:00</div>
@@ -420,7 +406,6 @@
       Для вашего удобства мы подготовили карту. Надеемся, что вы легко найдете место проведения свадьбы и порадуете нас своим присутствием!
     </div>
   </div>
-
   <div class="section fade-in fade-in-5 program-section" id="program">
     <div class="program-title">Программа<br><span class="program-script">дня</span></div>
     <ul class="program-list">
@@ -433,7 +418,6 @@
       <li class="program-item"><span class="program-time">23:00</span> <span class="program-desc">Окончание вечера<br><span style="font-weight:400; font-size:0.98em;">Спасибо, что были с нами!</span></span></li>
     </ul>
   </div>
-
   <div class="section fade-in fade-in-6 dress-section" id="dress">
     <div class="dress-title">ПОДДЕРЖИТЕ НАШ<br><span class="dress-script">DRESS-CODE</span></div>
     <div class="palette palette-horizontal">
@@ -446,13 +430,11 @@
       Нам будет очень приятно, если вы поддержите цветовую гамму торжества и выберете наряды в соответствии с палитрой нашей свадьбы.
     </div>
   </div>
-
   <div class="section fade-in fade-in-7 counter-section" id="countdown">
     <div class="counter-title">ДО СВАДЬБЫ<br><span class="counter-script">ОСТАЛОСЬ</span></div>
     <div class="counter-number" id="days-left">81</div>
     <div id="days-label" style="font-size:1.13rem; color:#918073; margin-top:0.4em;">дней</div>
   </div>
-
   <div class="section fade-in fade-in-8 form-section" id="rsvp">
     <div class="form-title">ВОПРОСЫ<br><span class="form-script">для гостей</span></div>
     <form id="weddingForm" autocomplete="off">
@@ -495,7 +477,6 @@
       <div id="formMessage" class="form-message"></div>
     </form>
   </div>
-
   <script>
     // Плавное появление блоков с задержкой
     window.addEventListener('scroll', fadeInOnScroll);
@@ -523,84 +504,51 @@
       document.getElementById('days-label').textContent = getDaysWord(diff);
     }
     updateCountdown();
-    <!-- ...весь твой сайт до формы и саму форму оставляем как есть... -->
 
-<script>
-  // Плавное появление блоков с задержкой
-  window.addEventListener('scroll', fadeInOnScroll);
-  window.addEventListener('load', fadeInOnScroll);
-  function fadeInOnScroll() {
-    document.querySelectorAll('.fade-in').forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 70) el.classList.add('visible');
-    });
-  }
-  // Отсчет дней до свадьбы со склонением
-  function getDaysWord(n) {
-    n = Math.abs(n) % 100;
-    let n1 = n % 10;
-    if (n > 10 && n < 20) return 'дней';
-    if (n1 > 1 && n1 < 5) return 'дня';
-    if (n1 == 1) return 'день';
-    return 'дней';
-  }
-  const dateWedding = new Date("2025-10-18T12:00:00");
-  function updateCountdown() {
-    const today = new Date();
-    let diff = Math.ceil((dateWedding - today) / (1000 * 60 * 60 * 24));
-    document.getElementById('days-left').textContent = diff > 0 ? diff : 0;
-    document.getElementById('days-label').textContent = getDaysWord(diff);
-  }
-  updateCountdown();
+    // ОТПРАВКА ФОРМЫ В TELEGRAM-БОТА
+    const BOT_TOKEN = "8386004675:AAFUlxqqQlpPiz3BoogDYCaLLikS5Srrls4";
+    const CHAT_ID = "-1002785506322";
 
-  // ====== ВСТАВЬ ВМЕСТО Google Script =====
-  // --- ОТПРАВКА В TELEGRAM-БОТА ---
-  const BOT_TOKEN = "8386004675:AAFUlxqqQlpPiz3BoogDYCaLLikS5Srrls4";
-  const CHAT_ID = "-1002785506322";
+    document.getElementById('weddingForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        attendance: form.attendance.value,
+        drinks: Array.from(form.querySelectorAll('input[name="drinks"]:checked')).map(x=>x.value),
+        food: Array.from(form.querySelectorAll('input[name="food"]:checked')).map(x=>x.value),
+        music: form.music.value,
+      };
+      document.getElementById('formMessage').textContent = 'Отправляем...';
 
-  document.getElementById('weddingForm').onsubmit = async function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = {
-      name: form.name.value,
-      attendance: form.attendance.value,
-      drinks: Array.from(form.querySelectorAll('input[name="drinks"]:checked')).map(x=>x.value),
-      food: Array.from(form.querySelectorAll('input[name="food"]:checked')).map(x=>x.value),
-      music: form.music.value,
-    };
-    document.getElementById('formMessage').textContent = 'Отправляем...';
+      const text = `<b>Анкета гостя</b>\n` +
+        `👤 <b>Имя:</b> ${data.name}\n` +
+        `🎉 <b>Присутствие:</b> ${data.attendance}\n` +
+        `🍸 <b>Напитки:</b> ${data.drinks.length ? data.drinks.join(', ') : '—'}\n` +
+        `🍽️ <b>Еда:</b> ${data.food.length ? data.food.join(', ') : '—'}\n` +
+        `🎵 <b>Музыка:</b> ${data.music || '—'}`;
 
-    // Формируем текст для Telegram
-    const text = `<b>Анкета гостя</b>\n` +
-      `👤 <b>Имя:</b> ${data.name}\n` +
-      `🎉 <b>Присутствие:</b> ${data.attendance}\n` +
-      `🍸 <b>Напитки:</b> ${data.drinks.length ? data.drinks.join(', ') : '—'}\n` +
-      `🍽️ <b>Еда:</b> ${data.food.length ? data.food.join(', ') : '—'}\n` +
-      `🎵 <b>Музыка:</b> ${data.music || '—'}`;
+      try {
+        const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: text,
+            parse_mode: "HTML"
+          })
+        });
 
-    try {
-      const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: text,
-          parse_mode: "HTML"
-        })
-      });
-
-      if (response.ok) {
-        document.getElementById('formMessage').textContent = "Спасибо! Ваш ответ записан.";
-        form.reset();
-      } else {
-        throw new Error("Ошибка при отправке в Telegram");
+        if (response.ok) {
+          document.getElementById('formMessage').textContent = "Спасибо! Ваш ответ записан.";
+          form.reset();
+        } else {
+          throw new Error("Ошибка при отправке в Telegram");
+        }
+      } catch (err) {
+        document.getElementById('formMessage').textContent = "Ошибка! Попробуйте позже.";
       }
-    } catch (err) {
-      document.getElementById('formMessage').textContent = "Ошибка! Попробуйте позже.";
     }
-  }
-</script>
-
   </script>
 </body>
 </html>
