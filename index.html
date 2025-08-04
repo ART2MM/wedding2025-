@@ -9,48 +9,130 @@
       background: #faf8f6;
       font-family: 'Montserrat', Arial, sans-serif;
       color: #222;
+      margin: 0;
+      padding: 0;
     }
-    .form-container {
-      max-width: 420px;
-      margin: 40px auto;
+    header {
       background: #262420;
-      color: #fff;
-      border-radius: 20px;
-      box-shadow: 0 2px 20px #bdbdbd24;
-      padding: 32px 28px 20px 28px;
+      color: #fff8ed;
+      padding: 40px 0 20px 0;
+      text-align: center;
+      border-radius: 0 0 35px 35px;
     }
-    h2 {
+    header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3em;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
+    header h2 {
+      margin: 6px 0 0 0;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.35em;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      color: #b5a17a;
+    }
+    .section {
+      max-width: 620px;
+      background: #fff;
+      margin: 34px auto;
+      padding: 32px 30px 28px 30px;
+      border-radius: 18px;
+      box-shadow: 0 2px 24px #bdbdbd15;
+    }
+    .section-title {
       text-align: center;
       font-family: 'Playfair Display', serif;
-      margin-bottom: 6px;
-      letter-spacing: 1px;
-      font-size: 1.5em;
+      font-size: 1.33em;
+      font-weight: 700;
+      color: #b5a17a;
+      margin-bottom: 18px;
+      letter-spacing: .5px;
+    }
+    .palette {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin: 22px 0 8px 0;
+    }
+    .palette div {
+      width: 48px; height: 36px; border-radius: 8px;
+      border: 1.5px solid #eee;
+    }
+    .palette .p1 { background: #98B48C; }
+    .palette .p2 { background: #D3B8A8; }
+    .palette .p3 { background: #fff; border-color:#e4e1db; }
+    .palette .p4 { background: #A18A6C; }
+    .palette-label {
+      text-align: center;
+      margin-bottom: 5px;
+      font-size: 0.92em;
+      color: #777;
+      letter-spacing: .2px;
+    }
+    .map-block {
+      margin: 0 auto 15px auto;
+      max-width: 400px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 1px 10px #e6e6e6a5;
+      border: 2px solid #e4e1db;
+    }
+    .program-list {
+      margin: 0 0 0 0;
+      padding-left: 15px;
+      font-size: 1.1em;
+    }
+    .program-list li {
+      margin-bottom: 7px;
+      line-height: 1.5;
+    }
+    .form-container {
+      background: #262420;
+      color: #fff;
+      border-radius: 17px;
+      box-shadow: 0 2px 20px #bdbdbd24;
+      padding: 30px 22px 20px 22px;
+      max-width: 420px;
+      margin: 38px auto;
+    }
+    .form-container h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.24em;
+      margin-bottom: 12px;
+      letter-spacing: .5px;
+      color: #f5e8ce;
     }
     label {
       display: block;
-      margin: 18px 0 6px 0;
+      margin: 15px 0 7px 0;
       font-weight: 500;
-      letter-spacing: .02em;
+      font-size: 1em;
+      letter-spacing: .01em;
     }
     input[type="text"], textarea, select {
       width: 100%;
       padding: 10px 12px;
-      border-radius: 8px;
+      border-radius: 7px;
       border: none;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       background: #f5f5f2;
       color: #23201c;
       font-size: 1em;
     }
     textarea {
-      min-height: 40px;
+      min-height: 36px;
       max-height: 120px;
       resize: vertical;
     }
     .row {
       display: flex;
-      gap: 18px;
+      gap: 15px;
       margin-bottom: 7px;
+      flex-wrap: wrap;
     }
     .row label {
       margin: 0;
@@ -71,23 +153,94 @@
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s;
-      margin-top: 18px;
+      margin-top: 17px;
     }
     .btn:active { background: #9b895f; }
     .success, .error {
       margin-top: 12px;
       text-align: center;
-      font-size: 1.06em;
+      font-size: 1.05em;
       font-weight: 500;
     }
     .success { color: #b4e7b4; }
     .error   { color: #ffc3c3; }
-    .small { font-size: 0.91em; opacity: 0.8;}
+    .small { font-size: 0.91em; opacity: 0.83;}
+    .footer {
+      text-align: center;
+      color: #bbb;
+      font-size: .98em;
+      padding: 18px 8px 24px 8px;
+      margin-top: 34px;
+    }
+    @media (max-width: 600px) {
+      .section, .form-container { max-width: 98vw; padding: 15vw 2vw 9vw 2vw;}
+      .map-block { max-width: 95vw;}
+      header { padding: 25px 0 12px 0;}
+      .palette div { width: 37px; height: 26px;}
+    }
   </style>
+  <!-- Google Fonts: Playfair, Dancing Script, Montserrat -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- HEADER -->
+  <header>
+    <h1>Свадебное Артёма & Ани</h1>
+    <h2>18 октября 2025, Санкт-Петербург</h2>
+  </header>
+
+  <!-- DRESS-CODE & COLORS -->
+  <div class="section" style="margin-top:28px">
+    <div class="section-title">Dress code &amp; Цвета</div>
+    <div class="palette-label">Будет здорово, если вы поддержите наш стиль в одежде:</div>
+    <div class="palette">
+      <div class="p1" title="#98B48C"></div>
+      <div class="p2" title="#D3B8A8"></div>
+      <div class="p3" title="#fff"></div>
+      <div class="p4" title="#A18A6C"></div>
+    </div>
+    <div class="palette-label small" style="margin-top:12px;">
+      Мы будем очень рады, если вы подберёте наряды в этой гамме!
+    </div>
+  </div>
+
+  <!-- PROGRAM -->
+  <div class="section">
+    <div class="section-title">Программа дня</div>
+    <ul class="program-list">
+      <li><b>11:30</b> — Сбор гостей у ЗАГСа<br>
+        <span class="small">С собой: хорошее настроение и улыбки</span>
+      </li>
+      <li><b>12:00</b> — Церемония бракосочетания<br>
+        <span class="small">Готовьте платочки для трогательных моментов!</span>
+      </li>
+      <li><b>13:00</b> — Фотосессия</li>
+      <li><b>15:00</b> — Банкет, тёплые тосты, веселье, танцы</li>
+      <li><b>19:00</b> — Бенгальские огни, завершение волшебного дня</li>
+      <li><b>23:00</b> — Окончание вечера. Спасибо, что были с нами!</li>
+    </ul>
+  </div>
+
+  <!-- MAP -->
+  <div class="section">
+    <div class="section-title">Место проведения</div>
+    <div style="text-align:center; font-size:1.09em; margin-bottom:10px;">
+      Петергоф, Торговая площадь, 5
+    </div>
+    <div class="map-block">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5d7d90a8cba2e9bcfca5c876eb9e2fc9ca00c6de8e7a9d2cbcb162d5a1f99b7c&amp;source=constructor"
+        width="100%" height="270" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </div>
+    <div class="palette-label small">
+      Для вашего удобства мы подготовили карту. Ждём вас!
+    </div>
+  </div>
+
+  <!-- FORM (TO TELEGRAM) -->
   <div class="form-container">
-    <h2>Свадебное Артёма & Ани</h2>
+    <h2>Анкета гостя</h2>
     <form id="weddingForm" autocomplete="off">
       <label>Ваше имя и фамилия *</label>
       <input type="text" name="name" required placeholder="Ваше имя">
@@ -98,7 +251,7 @@
         <label><input type="radio" name="attendance" value="Не смогу"> Не смогу</label>
       </div>
 
-      <label>Любимые напитки (можно несколько)</label>
+      <label>Любимые напитки</label>
       <div class="row">
         <label><input type="checkbox" name="drinks" value="Шампанское"> Шампанское</label>
         <label><input type="checkbox" name="drinks" value="Вино"> Вино</label>
@@ -121,9 +274,15 @@
     </form>
   </div>
 
+  <div class="footer">
+    С любовью, Артём и Аня &middot; <span style="color:#b5a17a;">2025</span>
+  </div>
+
+  <!-- FORM TO TELEGRAM BOT -->
   <script>
+    // Вставь сюда свои токен и chat_id группы Telegram:
     const BOT_TOKEN = "8386004675:AAFUlxqqQlpPiz3BoogDYCaLLikS5Srrls4";
-    const CHAT_ID = "-1002785506322"; // ID вашей группы
+    const CHAT_ID = "-1002785506322"; // Telegram group
 
     const form = document.getElementById('weddingForm');
     const msg = document.getElementById('formMsg');
@@ -132,7 +291,7 @@
       e.preventDefault();
       msg.textContent = "Отправляем...";
 
-      // Собираем данные формы
+      // Данные формы
       const fd = new FormData(form);
       const name = fd.get('name');
       const attendance = fd.get('attendance') || '';
@@ -140,8 +299,8 @@
       const food = fd.getAll('food').join(', ') || 'нет';
       const music = fd.get('music') || '—';
 
-      // Формируем сообщение для Telegram
-      const text = `<b>Новая заявка со свадьбы:</b>\n` +
+      // Сообщение для Telegram
+      const text = `<b>Анкета гостя</b>\n` +
         `👤 <b>Имя:</b> ${name}\n` +
         `🎉 <b>Присутствие:</b> ${attendance}\n` +
         `🍸 <b>Напитки:</b> ${drinks}\n` +
@@ -160,7 +319,6 @@
         });
 
         if (response.ok) {
-          msg.textContent = "";
           msg.className = "success";
           msg.textContent = "Спасибо! Ответ отправлен.";
           form.reset();
